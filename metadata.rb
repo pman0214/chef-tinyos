@@ -1,4 +1,4 @@
-name             'tinyos'
+name             'chef-tinyos'
 maintainer       'Shigemi ISHIDA'
 maintainer_email 'ishida+devel@f.ait.kyushu-u.ac.jp'
 license          'BSD 3-Clause License'

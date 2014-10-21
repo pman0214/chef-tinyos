@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: tinyos
+# Cookbook Name:: chef-tinyos
 # Recipe:: default
 #
 # Copyright (c) 2014, Shigemi ISHIDA
@@ -29,8 +29,8 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 
-include_recipe 'tinyos::install_req_packages'
-include_recipe 'tinyos::build_nesc'
-include_recipe 'tinyos::setup_env_vars'
-include_recipe 'tinyos::build_tinyos_dev'
-include_recipe 'tinyos::install_avr_dev'
+include_recipe 'chef-tinyos::install_req_packages'
+include_recipe 'chef-tinyos::build_nesc'
+include_recipe 'chef-tinyos::setup_env_vars'
+include_recipe 'chef-tinyos::build_tinyos_dev'
+include_recipe 'chef-tinyos::install_avr_dev'

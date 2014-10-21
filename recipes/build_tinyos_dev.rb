@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: tinyos
+# Cookbook Name:: chef-tinyos
 # Recipe:: build_tinyos_dev
 #
 # Copyright (c) 2014, Shigemi ISHIDA
@@ -31,10 +31,10 @@
 
 execute "build_tinyos_tools" do
   cwd "/home/vagrant/tinyos-main/tools"
-  environment ({'TOSROOT' => node["tinyos"]["tinyos-main"],
-                 'TOSDIR' => "#{node["tinyos"]["tinyos-main"]}/tos",
-                 'MAKERULES' => "#{node["tinyos"]["tinyos-main"]}/support/make/Makerules",
-                 'CLASSPATH' => ".:#{node["tinyos"]["tinyos-main"]}/support/sdk/java/tinyos.jar"
+  environment ({'TOSROOT' => node["chef-tinyos"]["tinyos-main"],
+                 'TOSDIR' => "#{node["chef-tinyos"]["tinyos-main"]}/tos",
+                 'MAKERULES' => "#{node["chef-tinyos"]["tinyos-main"]}/support/make/Makerules",
+                 'CLASSPATH' => ".:#{node["chef-tinyos"]["tinyos-main"]}/support/sdk/java/tinyos.jar"
                })
   user "vagrant"
   command <<-EOF
@@ -47,10 +47,10 @@ end
 
 execute "install_tinyos_tools" do
   cwd "/home/vagrant/tinyos-main/tools"
-  environment ({'TOSROOT' => node["tinyos"]["tinyos-main"],
-                 'TOSDIR' => "#{node["tinyos"]["tinyos-main"]}/tos",
-                 'MAKERULES' => "#{node["tinyos"]["tinyos-main"]}/support/make/Makerules",
-                 'CLASSPATH' => ".:#{node["tinyos"]["tinyos-main"]}/support/sdk/java/tinyos.jar"
+  environment ({'TOSROOT' => node["chef-tinyos"]["tinyos-main"],
+                 'TOSDIR' => "#{node["chef-tinyos"]["tinyos-main"]}/tos",
+                 'MAKERULES' => "#{node["chef-tinyos"]["tinyos-main"]}/support/make/Makerules",
+                 'CLASSPATH' => ".:#{node["chef-tinyos"]["tinyos-main"]}/support/sdk/java/tinyos.jar"
                })
   command "make install 2>&1 | tee install.log"
   action :nothing

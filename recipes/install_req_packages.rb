@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: tinyos
+# Cookbook Name:: chef-tinyos
 # Recipe:: install_req_packages
 #
 # Copyright (c) 2014, Shigemi ISHIDA

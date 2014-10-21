@@ -20,7 +20,7 @@ Tested on
 
 Attributes
 ----------
-#### tinyos::default
+#### chef-tinyos::default
 <table>
   <tr>
     <th>Key</th>
@@ -29,7 +29,7 @@ Attributes
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['tinyos']['main-dir']</tt></td>
+    <td><tt>['chef-tinyos']['main-dir']</tt></td>
     <td>String</td>
     <td>path to TinyOS main directory</td>
     <td><tt>/usr/src/tinyos-main</tt></td>
@@ -39,15 +39,15 @@ Attributes
 
 Usage
 -----
-#### tinyos::default
+#### chef-tinyos::default
 
-Just include `tinyos` in your node's `run_list`:
+Just include `chef-tinyos` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[tinyos]"
+    "recipe[chef-tinyos]"
   ]
 }
 ```

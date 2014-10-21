@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: tinyos
+# Cookbook Name:: chef-tinyos
 # Recipe:: setup_env_vars
 #
 # Copyright (c) 2014, Shigemi ISHIDA

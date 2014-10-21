@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: tinyos
+# Cookbook Name:: chef-tinyos
 # Recipe:: build_nesc
 #
 # Copyright (c) 2014, Shigemi ISHIDA
