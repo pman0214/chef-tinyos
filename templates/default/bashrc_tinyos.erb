@@ -1,0 +1,8 @@
+<%
+conf = node['tinyos']
+%>
+# for TinyOS
+export TOSROOT=<%= conf['main-dir'] %>
+export TOSDIR=$TOSROOT/tos
+export MAKERULES=$TOSROOT/support/make/Makerules
+export CLASSPATH=.:$TOSROOT/support/sdk/java/tinyos.jar
