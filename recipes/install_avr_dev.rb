@@ -34,3 +34,7 @@
     action :install
   end
 end
+
+execute "mod_tty_permission" do
+  command "usermod -G dialout vagrant"
+end
