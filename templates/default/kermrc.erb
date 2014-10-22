@@ -31,8 +31,10 @@
 <%
 conf = node['chef-tinyos']
 %>
-# for TinyOS
-export TOSROOT=<%= conf['main-dir'] %>
-export TOSDIR=$TOSROOT/tos
-export MAKERULES=$TOSROOT/support/make/Makerules
-export CLASSPATH=.:$TOSROOT/support/sdk/java/tinyos.jar
+set line <%= conf['kermit-line'] %>
+set serial 8N1
+set speed 57600
+set carrier-watch off
+set flow-control none
+set transmit prompt 0
+set transmit linefeed on

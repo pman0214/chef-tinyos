@@ -34,6 +34,12 @@ Attributes
     <td>path to TinyOS main directory</td>
     <td><tt>/usr/src/tinyos-main</tt></td>
   </tr>
+  <tr>
+    <td><tt>['chef-tinyos']['kermit-line']</tt></td>
+    <td>String</td>
+    <td>path to serial port for MOTE monitoring</td>
+    <td><tt>/dev/ttyUSB1</tt></td>
+  </tr>
 </table>
 
 

@@ -26,3 +26,4 @@
 # SUCH DAMAGE.
 
 default['chef-tinyos']['main-dir'] = "/usr/src/tinyos-main"
+default['chef-tinyos']['kermit-line'] = "/dev/ttyUSB1"

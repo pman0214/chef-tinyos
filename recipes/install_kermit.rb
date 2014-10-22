@@ -1,5 +1,6 @@
 #
-# This file is automatically created by a chef-tinyos cookbook.
+# Cookbook Name:: chef-tinyos
+# Recipe:: install_kermit
 #
 # Copyright (c) 2014, Shigemi ISHIDA
 # All rights reserved.
@@ -28,11 +29,14 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 
-<%
-conf = node['chef-tinyos']
-%>
-# for TinyOS
-export TOSROOT=<%= conf['main-dir'] %>
-export TOSDIR=$TOSROOT/tos
-export MAKERULES=$TOSROOT/support/make/Makerules
-export CLASSPATH=.:$TOSROOT/support/sdk/java/tinyos.jar
+%w{ckermit}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
+template "/home/vagrant/.kermrc" do
+  source "kermrc.erb"
+  mode 0644
+  owner "vagrant"
+end
