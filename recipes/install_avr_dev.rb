@@ -29,7 +29,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 
-%w{avrdude gcc-avr}.each do |pkg|
+%w{avrdude gcc-avr avr-libc}.each do |pkg|
   package pkg do
     action :install
   end
